@@ -1,0 +1,231 @@
+///////////////////////////////////////////////////////////
+// Title: 				Programming Assignment 5
+// Main Class File: 	P5.java
+// Files: 				test.cf
+// Semester: 			CS 536 Fall 2015
+//
+// Author: 				Yuting Liu
+// Email:				liu487@wisc.edu
+// CS Login: 			yuting
+// Lecturer: 			Aws Albarghouthi
+//////////////////////////////////////////////////////////
+
+// varable declaration
+int x;
+int y;
+
+struct Node {
+	int data;
+	bool flag;
+};
+
+// struct declarion
+struct Map {
+	// declare the variable of another struct type
+	struct Node root; 
+	int mapValue;
+	
+};
+
+struct Map mymap;
+struct Node mynode;
+
+//stmts - assign & some calculation
+int GivenFunc(int x, bool b) {
+    return x+1;
+}
+
+int getValue(int x, bool f) {
+    if(f) {
+        return x + 1;
+    }
+    else {
+        return x - 1;
+    }
+}
+void VoidFunc() {}
+
+bool getflag(int x) {
+    return (x > 0);
+}
+//test struct
+int func(int data, bool f, int value) {
+	
+	// redefine the global varible
+	struct Map x;
+	int mymap;
+	
+	//use variable globally defined
+	x.mapValue = y;
+	
+	// dot access
+	x.root.data = data;
+	x.root.flag = f;
+	x.mapValue = mymap;
+    x.mapValue = GivenFunc(mymap, f);
+    // correct call function itself
+    x.mapValue = func(mymap, f, y);
+    x.root.data = GivenFunc(x.mapValue, f);
+}
+
+struct Point {
+    int x;
+    int y;
+};
+
+// formal declaration with statement
+void g() {
+        int a;
+        bool b;
+        struct Point p;
+        p.x = a;
+    
+        // ==
+        b = a == 3;
+    
+        // precedence
+        getValue(a + p.y*2, b);
+
+        //functtion called itself
+        g();
+}
+
+// stmt - if
+int testif(int x, int a, int b){
+	if(x==0){
+		return x;
+	}
+	x = a*2 + b;
+	return x;
+}
+
+// stmt - if else
+bool testAssign(int x, bool a){
+	// if else statment
+	if(a==true){
+		x=1;
+		return true;
+	} else{
+		x=-1; return false;
+	}
+	return true;
+}
+
+// stmt - if else
+void testifelse(){
+int b;
+bool c;
+if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }}
+
+int print(int x){
+	return x;
+}
+
+//stmt - incrementation and decrementation
+void testIncAndDec(int x, bool Inc){
+	
+	// incrementation
+	if(Inc== true){
+		x++;
+	}
+	
+	// decrementation
+	else{
+		x--;
+	}
+	
+	//return void
+	return;
+}
+
+//stmt - read and write
+int testReadAndWriteInt(int readVal, int writeVal){
+	cin>>readVal; 
+	cout<<writeVal;
+	
+	// return expresion 
+	return readVal + writeVal;
+}
+
+bool testReadAndWriteBool(bool readFlag, bool writeFlag){
+	cin>>readFlag; 
+	cout<<writeFlag;
+	return writeFlag || readFlag;
+}
+
+struct readFile{
+	int data_val;
+};
+
+struct writeFile {
+	int data_val;
+};
+
+void testReadANdWriteStruct(int data, int writeStr){
+	// CIN READ loc SEMICOLON
+	struct readFile r;
+	struct writeFile w;
+	r.data_val = data;
+	cin>>r.data_val;
+	
+	// COUT WRITE exp SEMICOLON
+	// loc
+	w.data_val = writeStr;
+	cout<< w.data_val + r.data_val;
+	return;
+}
+
+// stmt - call
+int testFnCall(int x){
+	int y;
+	return print(x - 3 * y);
+}
+
+// stmt - while
+void testwhile(int count){
+	while(count != 0){
+		cout<<count;
+		count --;
+	}
+	return;
+}
+
+// test all exps & terms
+void testExp(){
+	int x;
+	int y;
+	int i;
+	int c;
+	
+	bool f;
+	bool g;
+	bool flag;
+	
+	// terms
+	i = 23;
+	f = true;
+	g = false;
+	f = getflag(2);
+	
+	// assignExp
+	x = x * 2;
+	
+	// +, -, *, /
+	y = (y + 2) * x;
+	x = (x + y)/ 2 *3 + 10 - c/2;
+	
+	// !, &&, ||, ==, !=, <, >, <=, >=
+	f = g && (flag == !f) || (x >= 8);
+	if(i != x+y){
+		f = i > x * 2;
+	} else {
+		f = g;
+	}
+	f = (x - i) != c || !g && (x <= y + c);
+	
+	// unary minus
+	y = -x + 2;
+	
+	return;
+}
+

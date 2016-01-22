@@ -1,0 +1,96 @@
+int x;
+int y;
+struct Map mymap;
+struct Map {
+    int mapkey;
+    int mapValue;
+};
+bool testAssign(int x, bool a) {
+    if((a == true)) {
+        x = 1;
+        return true;
+    }
+    else {
+        x = (-1);
+        return false;
+    }
+}
+void testIncAndDec(int x, bool Inc) {
+    if((Inc == true)) {
+        x ++;
+    }
+    else {
+        x --;
+    }
+    return ;
+}
+int testReadAndWriteInt(int readVal, int writeVal) {
+    cin >> readVal;
+    cout << writeVal;
+    return (readVal + writeVal);
+}
+bool testReadAndWriteBool(bool readFlag, bool writeFlag) {
+    cin >> readFlag;
+    cout << writeFlag;
+    return (writeFlag || readFlag);
+}
+void testReadANdWriteStruct(int readStr, int writeStr) {
+    cin >> readStr.data_Val;
+    cout << (writeStr.data_Val + readStr.data_Val);
+    return ;
+}
+int testif(int x, int a, int b) {
+    if((x == 0)) {
+        return Integer.MIN_VALUE;
+    }
+    x = ((a * 2) + b);
+    return x;
+}
+void testifelse() {
+    if((b == (-1))) {
+        x = ((4 + (3 * 5)) - y);
+        while(c) {
+            y = ((y * 2) + x);
+        }
+    }
+    else {
+        x = 0;
+    }
+}
+int testFnCall(int x) {
+    return print((x - (3 * y)));
+}
+void testwhile(int count) {
+    while((count != 0)) {
+        cout << count;
+        count --;
+    }
+}
+void testExp() {
+    int x;
+    int y;
+    bool f;
+    bool g;
+    void p;
+    i = 23;
+    f = true;
+    g = false;
+    f = contains("string");
+    x = (x * 2);
+    x.parent = (x / 10);
+    y = ((y + 2) * x);
+    x = (((((a + b) / 2) * 3) + 10) - (c / 2));
+    f = (g && ((flag == (!f)) >= x));
+    if((i != (x + y))) {
+        f = (i > (x * 2));
+    }
+    else {
+        f.flag = (i >= ((x * 3) + n));
+        g.value = (i < (((x / 2) + 10) / 2));
+    }
+    f = (g || ((!g) && (h <= g)));
+    f = ((-x) + 2);
+    f = getValue(x, i, h);
+    p = getVoid(x = a, (x + b), (flag || (g && i)));
+    return ;
+}

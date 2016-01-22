@@ -1,0 +1,30 @@
+void main(){
+     bool b1;
+     int i;
+     int j;
+     int k;
+     int r;
+     i = 1;
+     j = 2;
+     k = 3;
+     
+     r = i + j;
+     cout<<r;
+     cout<<"\n";
+
+     r = (i-j)*k/2;
+     cout<<r;
+     cout<<"\n";
+
+     i++;
+     cout<<i;
+     cout<<"\n";
+
+     r = (i*j)-(k*2)/4 + 1;
+     cout << r;
+     cout<<"\n";
+
+     b1 = false;
+     cout<<b1;
+     cout<<"\n";
+}

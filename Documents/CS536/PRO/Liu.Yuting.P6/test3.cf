@@ -1,0 +1,15 @@
+struct S{
+	int val;
+};
+
+void main(){
+	struct S s;
+	int i;
+	i = 3;
+	s.val = 1;
+	cout << s.val;
+	cout << "\n";
+	i = i + s.val;
+	cout << i ;
+	cout << "\n";
+}

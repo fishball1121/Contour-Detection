@@ -1,0 +1,21 @@
+int f1(){
+	return 12;
+}
+bool f2(){
+	if(f1() + 3 > 20){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+void main(){
+
+	if(f2() == true){
+		cout<<"f2 == true\n";
+	}
+	else{
+		cout<<"f2 == false\n";
+	}
+}

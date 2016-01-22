@@ -1,0 +1,6 @@
+name: PRICE number puppy
+symType: double int List<Integer>
+name: Capital MarketPrice StockNum CompanyName
+symType: long double int String
+name: Animal Name Category Color
+symType: String String String String

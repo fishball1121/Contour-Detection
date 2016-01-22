@@ -1,0 +1,7 @@
+cin
+<< "What is your school ID?"
+cout >> "I like this puppy!"
+Cost = for (all i) price_i * Number_i
+bool flag = false || (true && false)
+if(i >= threshold) flag = true
+else flag = false

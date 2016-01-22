@@ -1,0 +1,33 @@
+//try numbers
+4223333334829304
+-234567891234567
+//try illegal simbols and identifiers
+#comment
+[ui_layer]
+\haha
+<input_file>
+(abc
+liuyuting_fish@gmail.com
+MOV $1, $2
+U & I
+I love u~
+//Try different error strings
+"\\'\"?\?"
+"\'"
+"bad strings: \7\b"
+"another bad thing comes \\\ avc"
+"Try bad end \\\"
+"Is end good? \n\."
+"only one slash \ here."
+"another 3 backslashes \\\ bad"
+"\/ && symbols"
+"\\\bye bye !"
+"o
+"f_deg
+"try only one backslash \
+"try two backslashes \\
+"try more backslashes \\\\\
+"yoyo! check it now
+"unterminated \\\byer
+"try slash with \ & tab \	
+"unterminated EOF string \

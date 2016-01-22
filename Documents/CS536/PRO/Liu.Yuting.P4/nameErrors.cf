@@ -1,0 +1,100 @@
+///////////////////////////////////////////////////////////
+// Title: 				Programming Assignment 4
+// Main Class File: 	P4.java
+// Files: 				nameErrors.cf
+// Semester: 			CS 536 Fall 2015
+//
+// Author: 				Yuting Liu
+// Email:				liu487@wisc.edu
+// CS Login: 			yuting
+// Lecturer: 			Aws Albarghouthi
+//////////////////////////////////////////////////////////
+
+//struct - dotaccess error
+struct Node {
+        int data;
+        bool flag;
+        // declare the variable of it's own struct type
+        struct Node left;
+        struct Node right;
+};
+
+// struct declarion
+struct Map {
+        // declare the variable of another struct type
+        struct Node root; 
+        int mapValue;
+	
+};
+
+// multiply declared the same struct type name
+struct Map {
+    int hehe;
+    void illegal;
+};
+
+//multiple declared the same function name
+//illegar formal list
+int f(void x, void z, int y) {
+    int x;
+    void y;
+}
+
+int f(int x, int y) {
+        return x + y;
+}
+
+//multiple declared the same function name
+int f(int a) {
+    int x;
+    void illegal;
+}
+
+struct Node n;
+int x;
+int y;
+int TestDotAccess(){
+        struct Map myMap;
+        // invalid name of struct type
+        struct map AnotherMap;
+        struct x AnotherMap;
+        struct Node myMap;
+	
+        int Node;
+        // not declared variable
+        mymap.root.left = n;
+  
+        // dot-access of non-struct type
+        // x -> int
+        x.left = y.yeah;
+        x.left = myMap.whatever;
+	
+        // invalid struct field
+        myMap.left = n;
+        myMap.rot.left = n;
+
+}
+
+int TestFunc(bool f) {
+        int a;
+        // undeclared functions
+        a = g();
+        
+        TestFunc();
+}
+
+int TestMultiDecl(int x){
+        // multiply declared with formal list
+        int x;
+        // void type & multiple declared
+        void x;
+        //undeclared dentifier
+        while(c) {
+            int c;
+            x = c;
+        }
+        while(x) {
+            x = c;
+        }
+}
+

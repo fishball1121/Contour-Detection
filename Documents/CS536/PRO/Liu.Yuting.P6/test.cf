@@ -1,0 +1,231 @@
+///////////////////////////////////////////////////////////
+// Title: 				Programming Assignment 6
+// Main Class File: 	P6.java
+// Files: 				test.cf
+// Semester: 			CS 536 Fall 2015
+//
+// Author: 				Yuting Liu
+// Email:				liu487@wisc.edu
+// CS Login: 			yuting
+// Lecturer: 			Aws Albarghouthi
+//////////////////////////////////////////////////////////
+
+int a;
+bool b;
+int sum;
+
+void testWrite(int n) {
+    // print string
+    cout << "Hello world!\n\n";
+    cout << "false: ";
+    cout << b;
+    cout << "\n";
+    
+    // print expressions
+    a = 2;
+    cout << 2;
+    cout << "\ntrue:\t";
+    cout << true;
+    cout << "\na:\t";
+    cout << a;
+    cout << "\nn * 2:\t";
+    cout << n * 2;
+    cout << "\n";
+    return;
+}
+
+void testRead() {
+    cin >> a;
+    cin >> b;
+    cout << "Success read!\n";
+    return;
+}
+
+void textExpressions() {
+    int a;
+    bool c;
+    bool f;
+    int b;
+    
+    a = 2;
+    b = 3;
+    a = a + a * 2 / b;
+    cout << "a = 2 + 4/3: ";
+    cout << a;
+    a = -b * 2;
+    cout << "\na = -3 * 2: ";
+    cout << a;
+    cout << "\n";
+    
+    cout << "\n/* test logical expression */\n";
+    c = false;
+    f = c || true;
+    cout << f;
+    cout << "\n";
+    cout << !c || (true && false);
+    cout << "\n";
+    
+    cout << "\n/* test equality expression */\n";
+    cout << "a == b: ";
+    cout << (a == b);
+    cout << "\nbool type (c == f): ";
+    cout << c == f;
+    cout << "\nbool type (c != f): ";
+    cout << c != f;
+    cout << "\n";
+    cout << "\nstring type (\"abc\" == \"abce\"): ";
+    cout << "abc" == "abce";
+    cout << "\nstring type (\"abc\" != \"abce\"): ";
+    cout << "abc" != "abce";
+    cout << "\nstring type (\"abc\" == \"abc\"): ";
+    cout << "abc" == "abc";
+    cout << "\nstring type (\"abc\" != \"abc\"): ";
+    cout << "abc" != "abc";
+    cout << "\n";
+    
+    cout << "\na != b: ";
+    cout << (a != b);
+    cout << "\n";
+
+    cout << "\n/* test relational expression */\n";
+    cout << "2 < 3: ";
+    cout << (2 < 3);
+    cout << "\n";
+    cout << "3 > 4: ";
+    cout << 3 > 4;
+    cout << "\n";
+    cout << "2 >= 2: ";
+    cout << (2 >= 2);
+    cout << "\n";
+    cout << "4 <= 3: ";
+    cout << 4 <= 3;
+    cout << "\n";
+    
+    cout << "\n/* test inc and dec */\n";
+    cout << a;
+    a++;
+    cout << "\na++: ";
+    cout << a;
+    cout << "\na--: ";
+    a--;
+    cout << a;
+    cout << "\n";
+    return;
+}
+
+bool testIf(int a, int b) {
+    if(a != b) {
+        cout << "different a and b\n";
+        return false;
+    }
+    return true;
+}
+
+bool testIfElse(int a) {
+    cout << a;
+    if (a >= 100) {
+        cout << " >= 100: true\n";
+        return true;
+    }
+    else {
+        cout << " >= 100: false\n";
+        return false;
+    }
+}
+
+void testWhile(int i) {
+    while (i <= 10) {
+        if(i < 0) {
+            cout<< "illegal: negative\n";
+            return;
+        }
+        cout << "current i = ";
+        cout << i;
+        cout << "\n";
+        i++;
+    }
+    return;
+}
+
+int testReturnInt(int n) {
+    return n * 2;
+}
+
+bool testReturnBool1(bool f) {
+    return !f;
+}
+
+bool testReturnBool2(bool f, bool g) {
+    return f && g;
+}
+
+bool testReturnBool3(bool f, bool g) {
+    return f || g;
+}
+
+int Fabonacci(int n) {
+    if(n <= 1) {
+        return 1;
+    }
+    else {
+        return n * Fabonacci(n - 1);
+    }
+}
+
+
+void main(int c, bool d) {
+    
+    cout << "/* test write statement */\n";
+    testWrite(2);
+    
+    cout <<"\n";
+    cout << "/* test read statement */\n";
+    testRead();
+    
+    cout << "\n";
+    cout <<"/* test arithmetic expressions */\n";
+    textExpressions();
+    
+    cout << "\n";
+    cout << "/* test if stmt */\n";
+    cout << testIf(2, 3);
+    cout << "\n";
+    
+    cout << "\n";
+    cout << "/* test if else stmt */\n";
+    testIfElse(101);
+    testIfElse(10);
+    
+    cout << "\n";
+    cout << "/* test while stmt */\n";
+    testWhile(6);
+    testWhile(-1);
+    
+    cout <<"\n/* test recursive function */\n";
+    cout << "Fabonacci(5): ";
+    cout << Fabonacci(5);
+    cout << "\n";
+    a = Fabonacci(4);
+    cout << "a = Fabonacci(4), a: ";
+    cout << a;
+    cout << "\n";
+    
+    cout << "\n/* test int type return */\n";
+    cout << "2 * 2: ";
+    cout << testReturnInt(2);
+    cout << "\n";
+    
+    cout << "\n/* test bool type return */\n";
+    cout << "!f (f == true): ";
+    cout << testReturnBool1(true);
+    cout << "\n!f (f == false): ";
+    cout << testReturnBool1(false);
+    cout << "\n";
+    cout << "\ntrue && false: ";
+    cout << testReturnBool2(true, false);
+    cout << "\n\ntrue || false: ";
+    cout << testReturnBool3(true, false);
+    
+    return;
+}
+

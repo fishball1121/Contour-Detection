@@ -1,0 +1,11 @@
+int s;
+
+void f1(){
+	cout<<s;
+	cout<<"\n";
+}
+
+void main(){
+	s = 3;
+	f1();
+}

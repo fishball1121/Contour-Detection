@@ -1,0 +1,228 @@
+///////////////////////////////////////////////////////////
+// Title: 				Programming Assignment 5
+// Main Class File: 	P5.java
+// Files: 				nameError.cf
+// Semester: 			CS 536 Fall 2015
+//
+// Author: 				Yuting Liu
+// Email:				liu487@wisc.edu
+// CS Login: 			yuting
+// Lecturer: 			Aws Albarghouthi
+//////////////////////////////////////////////////////////
+
+// global variable
+struct Node {
+    int x;
+    int y;
+    int data;
+};
+struct Map {
+    struct Node n;
+};
+
+struct Node node1;
+struct Node node2;
+struct Map myMap;
+
+bool r;
+int x;
+int y;
+int z;
+
+void f(int a, bool b){}
+void testVoid(){}
+int fi(int a, bool b){
+    return a;
+}
+int fb(int a, bool b) {
+    return b;
+}
+
+// test all reads & writes
+void testRW() {
+    // Attempt to read in a function
+    cin >> f;
+    // Attempt to read in a struct name
+    cin >> Node;
+    // Attempt to read in a struct variable
+    cin >> node1;
+    cin >> myMap.n;
+    
+    // Attempt to write a function
+    cout << f;
+    // Attempt to write a void function
+    cout << f(x, y, r);
+    // errortype
+    cout << fi(x, r, y);
+    // Attempt to write a struct name
+    cout << Node;
+    // Attempt to write a struct variable;
+    cout << node1;
+}
+
+// test calling
+void testCalling() {
+    // Attempt to call a non-function
+    Node(x, y);
+    x(x, y);
+    node1(x, y);
+    myMap(x, y);
+    // Function call with wrong number of args
+    f(x, r, y);
+    f(x);
+    // Type of actual does not match type of formal
+    f(x, y);
+    f(r, x);
+}
+
+// test all returns
+
+// test void type
+int testVoidReturn1(bool a) {
+    // actual list type mismatch
+    // void function
+    return f(x, y);
+    return true;
+}
+
+// missing return
+bool testVoidRuturn2() {
+    return;
+}
+
+// Bad return value
+void returnOtherVoid() {
+    return x;
+    return f(x, r, y);
+    return r;
+    // errortype
+    return true + 3;
+}
+
+int returnOtherInt() {
+    // call function
+    // formal list error
+    // return bad value
+    return f(x, y, z);
+	
+    // int function return int;
+    return 10;
+
+    return f(x, r);
+    // error actual list
+    return f(x, y);
+    // only one report of plus
+    return true + 1;
+    return r;
+}
+
+bool returnOtherBool(int a, int b, bool n) {
+    return;
+    return x;
+    return (a == n);
+    return (r || true && 2);
+}
+
+// test all arithmetic operators
+void testArithOp(int a, int b, bool f, bool g) {
+    int res;
+    res = a + b * f - g;
+    f++;
+    g--;
+}
+
+// test all relational operators
+void testRelOp(int a, int b, bool g) {
+    bool res;
+    res = (a >= f);
+    res = (a <= b) > (a < f);
+    res = true > 2;
+    res = 3 > ("string" + x);
+}
+
+// test all logical operations
+void testLogical(int b) {
+    int a;
+    int c;
+    bool res;
+    //logical operator
+    x = !3;
+    y = r && f(x, r, a);
+    z = "yeah" || !3;
+    res = c || f && !b;
+    res = true || !true && ("string" + 2) && 3;
+    res = f;
+}
+
+// test all conditions
+void testConditions(int d) {
+    // not boolean type
+    if(x) {
+        return x;
+    } else { 
+        while(x || d) {
+            //incrementation
+            x++;
+            r--;
+            if(x > 100) {
+                return;
+            }
+            return y;
+        }
+        return x;
+    }
+    //error type
+    if(!3) {
+        while("this" || 3) {
+            if(f(d, r)) {
+                x++;
+            }
+        }
+    }
+}
+
+// test all equations and not equation
+void testAllEQ() {
+    bool res;
+    int r1;
+    int r2;
+    // type mismatch
+    res = (1 == true);
+    res = "String" != (1 == 2);
+    r = (1 + "string") == "stringa";
+    r = (true == 3) == (false == "string" + !3);
+    // compare two functions
+    // "==" and "!=" applied to functions
+    if(f==fb) {
+        r = (f != fb);
+        //  
+        r = f != f(r1, r2, x);
+        r = f != f(r1, res);
+        // compare two struct names
+        while(Node == Map) {
+            r = Node != Map;
+            // coompare two struct variables
+            r1 = (node1 == node2);
+            r2 = (node1 != node2);
+        }
+    }
+}
+
+// test all assignment
+void testAssign() {
+    // type mismatch
+    f = r;
+    Map = true || (2 || false) && 3;
+    Node = 1 + "S" - r + x;
+    
+    // Function assignment
+    f = testVoid;
+    
+    // Struct name assignment
+    Node = Map;
+    Node = Map;
+    
+    // Struct variable assignment
+    node1 = node2;
+    node1 = myMap;
+}

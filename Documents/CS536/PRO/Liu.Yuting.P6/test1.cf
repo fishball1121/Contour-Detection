@@ -1,0 +1,43 @@
+void main(){
+	int i;
+	int j;
+	bool b1;
+        bool b2;
+
+	i = 1;
+	j = 3;
+
+	if(i == j){
+		cout<<"i == j";
+		cout<<"\n";
+	}
+	else{
+		cout<<"i != j";
+		cout<<"\n";
+	}
+
+	if(i<j){
+		cout<<"i<j";
+		cout<<"\n";
+	}
+	if(i>=j){
+		cout<<"i>=j";
+		cout<<"\n";
+	}
+
+	b1 = true;
+	b2 = false;
+
+	if(b1 || b2){
+		cout<<"b1 || b2";
+		cout<<"\n";
+	}
+	if(b1 && b2){
+		cout<<"b1 && b2";
+		cout<<"\n";
+	}
+	if(!b2){
+		cout<<"!b2";
+		cout<<"\n";
+	}
+}

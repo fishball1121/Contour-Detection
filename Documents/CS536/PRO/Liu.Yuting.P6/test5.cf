@@ -1,0 +1,18 @@
+int f1(){
+	return 12;
+}
+bool f2(){
+	return false;
+}
+
+void main(){
+	int i;
+	bool b;
+
+	if(f1() == 12){
+		cout<<"f1 == 12\n";
+	}
+	if(!f2() && true){
+		cout<<"!f2 == true\n";
+	}
+}

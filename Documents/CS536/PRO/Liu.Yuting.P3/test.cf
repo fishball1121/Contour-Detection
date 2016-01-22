@@ -1,0 +1,138 @@
+///////////////////////////////////////////////////////////
+// Title: 				Programming Assignment 3
+// Main Class File: 	P3.java
+// Files: 				test.cf
+// Semester: 			CS 536 Fall 2015
+//
+// Author: 				Yuting Liu
+// Email:				liu487@wisc.edu
+// CS Login: 			yuting
+// Lecturer: 			Aws Albarghouthi
+//////////////////////////////////////////////////////////
+
+// varable declaration
+int x;
+int y;
+struct Map mymap;
+
+// struct declarion
+struct Map{
+	int mapkey; 
+	int mapValue;
+};
+
+// formal declaration with statement
+// stmt - assignment
+bool testAssign(int x, bool a){
+	if(a==true){
+		x=1;
+		return true;
+	} else{
+		x=-1; return false;
+	}
+}
+
+//stmt - incrementation and decrementation
+void testIncAndDec(int x, bool Inc){
+	// incrementation
+	if(Inc== true){
+		x++;
+	}
+	// decrementation
+	else{
+		x--;
+	}
+	return;
+}
+
+//stmt - read and write
+int testReadAndWriteInt(int readVal, int writeVal){
+	cin>>readVal; 
+	cout<<writeVal;
+	return readVal + writeVal;
+}
+
+bool testReadAndWriteBool(bool readFlag, bool writeFlag){
+	cin>>readFlag; 
+	cout<<writeFlag;
+	return writeFlag || readFlag;
+}
+
+void testReadANdWriteStruct(int readStr, int writeStr){
+	// CIN READ loc SEMICOLON
+	cin>>readStr.data_Val;
+	// COUT WRITE exp SEMICOLON
+	// loc
+	cout<<writeStr.data_Val + readStr.data_Val;
+	return;
+}
+
+// stmt - if
+int testif(int x, int a, int b){
+	if(x==0){
+		return Integer.MIN_VALUE;
+	}
+	x = a*2 + b;
+	return x;
+}
+
+// stmt - if else
+void testifelse(){
+if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }}
+
+// stmt - call
+int testFnCall(int x){
+	return print(x - 3 * y);
+}
+
+// stmt - while
+void testwhile(int count){
+	while(count != 0){
+		cout<<count;
+		count --;
+	}
+}
+
+// test all exps & terms
+void testExp(){
+	int x;
+	int y;
+	bool f;
+	bool g;
+	void p;
+	
+	// terms
+	i = 23;
+	f = true;
+	g = false;
+	f = contains("string");
+	
+	// assignExp
+	x = x * 2;
+	x.parent = x / 10;
+	
+	// +, -, *, /
+	y = (y + 2) * x;
+	x = (a + b)/ 2 *3 + 10 - c/2;
+	
+	// !, &&, ||, ==, !=, <, >, <=, >=
+	f = g && (flag == !f) >= x;
+	if(i != x+y){
+		f = i > x * 2;
+	} else {
+		f.flag = i >= x * 3 + n;
+		g.value = i < (x / 2 + 10) / 2;
+	}
+	f = g || !g && (h <= g);
+	
+	// unary minus
+	f = -x + 2;
+	
+	// function call
+	f = getValue(x, i, h);
+	
+	// function call with expresions
+	p = getVoid(x = a, x + b, flag || g && i);
+	return;
+}
+

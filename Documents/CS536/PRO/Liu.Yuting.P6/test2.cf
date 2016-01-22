@@ -1,0 +1,36 @@
+int f1(){
+	return 12;
+}
+bool f2(){
+	return false;
+}
+void f3(){
+	cout<<"in void fn\n";
+}
+
+void fn1(int a){
+	cout<<a;
+	cout<<"\n";
+}
+void fn2(int a, bool b){
+	cout<<a;
+	cout<<"\t";
+	cout<<b;
+	cout<<"\n";
+}
+
+void main(){
+	int i;
+	bool b;
+	i = f1();
+	b = f2();
+	
+	cout<<i;
+	cout<<"\t";
+	cout<<b;
+	cout<<"\n";
+		
+	f3();
+	fn1(i);
+	fn2(i,b);	
+}
