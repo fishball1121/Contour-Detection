@@ -167,8 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Paragraph & Typographic */
 p {
-    line-height: 28px;
-    margin-bottom: 25px;
+    line-height: 25px;
+    margin-bottom: 5px;
 }
 
 .centered {
@@ -176,7 +176,7 @@ p {
 }
 
 .paragraph-lead {
-    font-size: 20px;
+    font-size: 10px;
     color: #3498db;
 }
 
@@ -420,15 +420,16 @@ a:after {
 }
 
 .divider3 {
-	background-image: url('../img/bg/divider3.jpg');
-	margin-top: 0px;
+	background-image: url('../img/bg/divider3.jpg')
 }
 
 .divider4 {
 	background-image: url('../img/bg/divider4.jpg')
 }
 
-
+.divider5 {
+    background-image: url('../img/bg/divider5.jpg')
+}
 
 /* ==========================================================================
    Services Section
