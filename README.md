@@ -1,5 +1,5 @@
 ### CS 766 Introduction to Computer Vision Project Demo
 ====
-Author: Yuting Liu
+Author: Yuting Liu, Haiyan Yang, Shuo Han
 
 Please check the project demo at [HERE](https://fishball1121.github.io/Contour-Detection)
