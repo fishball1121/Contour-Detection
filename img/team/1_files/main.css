@@ -262,9 +262,7 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-.col-lg-12 img {
-    margin: 10px 10px 10px 10px;
-}
+
 
 /* ==========================================================================
    Wrap Sections
@@ -428,10 +426,6 @@ a:after {
 
 .divider4 {
 	background-image: url('../img/bg/divider4.jpg')
-}
-
-.divider5 {
-	background-image: url('../img/bg/divider5.jpg')
 }
 
 
