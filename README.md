@@ -3,4 +3,3 @@
 Author: Yuting Liu
 
 Please check the project demo at [HERE](https://fishball1121.github.io/Contour-Detection)
->>>>>>> master
