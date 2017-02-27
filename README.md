@@ -2,4 +2,4 @@
 ====
 Author: Yuting Liu, Haiyan Yang, Shuo Han
 
-Please check the project demo at [HERE](https://fishball1121.github.io/Contour-Detection)
+Please check the project demo at [HERE](https://yuting-liu.github.io/Contour-Detection)
